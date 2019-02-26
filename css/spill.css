@@ -1,0 +1,105 @@
+body {
+  background: radial-gradient(circle, black, #333, #f3f3f3);
+  width: 100%;
+
+}
+/* .content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+} */
+
+
+.wrapper-spill {
+    background: radial-gradient(circle, black, #333, #f3f3f3);
+    width: 100%;
+    min-height: 60vh;
+    border-radius: 0.1em;
+    background: rgba(51, 51, 51, 0.9);
+    width: 70vw;
+    padding: 2em;
+    margin: auto;
+    top:7vh;
+    margin-top: 1em;
+    margin-bottom: calc(7vh + 1em);
+    position: relative;
+    overflow-y: scoll;
+
+}
+
+.wrapper-spill > div {
+    border: 2px solid #000;
+    border-radius: 5px;
+    background: #e6e6e6;
+    padding: 1em;
+    box-shadow: 0 0 10px black;
+
+
+}
+.wrapper-spill {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.1em;
+}
+
+
+/* CARD STYLING SPESIFIC  */
+.card {
+  height: 25vh;
+
+}
+.card img {
+  height: 70%;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* sticky option bar left side  */
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.sticky-sort {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 1px solid #f3f3f3;
+  margin-left: 2em;
+}
+
+/* Style the select option bar*/
+
+
+
+.optionbar {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.5em;
+  background: #333;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+
+}
+.sort-header {
+  background: #f3f3f3;
+  color: black;
+  padding:4px;
+}
+
+
+input {
+  position: absolute;
+  visibility: hidden;
+}
+input:checked + div{
+  background: #000;
+  display: block;
+  color: green;
+}

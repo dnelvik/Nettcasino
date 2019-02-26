@@ -1,0 +1,144 @@
+body {
+	background-image: url("../bilder/bakgrunnsa.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	outline: 0;
+}
+
+header {
+	grid-area: header;
+}
+canvas {
+	border: 1px solid black;
+	background-color: #333;
+	width: 600px;
+	height: 215px;
+	border-radius: 4px;
+	grid-area: spillboks;
+}
+
+header h1 {
+	font-size: 2.5em;
+	font-family: ;
+	text-align: center;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	font-family: 'Ultra', serif;
+}
+#container{
+	min-height: calc(100vh - 112px);
+	grid-template-columns: 1fr 2fr 1fr;
+	display: grid;
+}
+#indreboks{
+	margin-top: 6em;
+	margin-bottom: 1em;
+	background-color: rgba(243, 243, 243, 0.8);
+	box-shadow: 0 0 5px black;
+	padding: 0 3em 3em 3em;
+	grid-gap: 2em;
+	display: grid;
+	grid-column: 2;
+	grid-template-areas: "header tabell"
+	"spillboks tabell"
+	"knappeboks tabell";
+}
+
+
+#gevinstliste{
+	grid-area: tabell;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-weight: bold;
+
+}
+#gevinstliste ul {
+}
+#gevinstliste li {
+	list-style: none;
+}
+#gevinstliste li img {
+	float: left;
+}
+#rad1 {
+	grid-column: 1/6;
+}
+#knapp {
+	grid-column: 1;
+	grid-row: 2;
+}
+#gevinst {
+	grid-column: 2;
+	color: #333;
+	font-size: 1.5em;
+}
+#saldo {
+	grid-column: 3;
+	grid-row: 2;
+	color: #333;
+	font-size: 1.5em;
+}
+.tfield {
+	width: 150px;
+	font-size: 1em;
+}
+#sfelt {
+	width: 150px;
+}
+#knapper {
+	display: grid;
+	align-items: start;
+	justify-items: start;
+	grid-area: knappeboks;
+	grid-template-columns: repeat(3, 1fr);
+}
+#knapper button {
+	background: #333;
+	color: white;
+	border-radius: 5px;
+}
+#knapper button span{
+	text-align:center;
+	font-size: 1;
+	padding:13px 0px;
+	display:inline-block;
+	width:100px;
+	margin:4px;
+}
+#knapper label span{
+	text-align:center;
+	font-size: 1em;
+	padding:13px 0px;
+	display:block;
+	background: #333;
+	color: white;
+}
+#knapper label {
+	width: 105px;
+	display: inline-block;
+	margin:4px;
+	background-color:#eee;
+	border-radius:4px;
+	overflow:auto;
+	color: black;
+}
+
+#knapper label input {
+	position:absolute;
+	top:-20px;
+}
+#knapper input:checked + span {
+	background-color:#be222b;
+	color: white;
+}
+
+#lydbilde img {
+	height: 20px;
+}
+
+
+ul li img  {
+	height: 20px;
+}

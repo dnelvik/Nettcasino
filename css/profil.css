@@ -1,0 +1,304 @@
+/* CORE STYLE  PROFILE*/
+body {
+  background: #000;
+  overflow:hidden;
+}
+
+
+
+/* GRID LAYOUT FULL SIZE */
+  .top-content {
+    display: grid;
+    grid-template-areas:
+      "content content"
+      "box-a box-b"
+      "box-under box-under";
+      grid-template-rows: 2fr 10vh 10vh;
+      margin-top: 7vh;
+
+      height: calc(100vh - 21vh);
+
+  }
+
+
+
+/* BOX DESIGN FOR CHOSEN FUNCTION */
+.content-profil {
+  display: grid;
+  background: rgba(51, 51, 51, 0.9);
+  width: 40%;
+  box-shadow: 0 0 5px white;
+  overflow: auto;
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.content-profil a {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+  /* PICTURE STYLING */
+  .header-img-bg {
+    grid-column: content;
+    background: #fff url('https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+
+
+
+
+  /* TOP SPLIT BOXES ---- SETT INN OG TA UT */
+  .top-box {
+    display: grid;
+    background: #333;
+    color: white;
+    justify-self:center;
+    justify-items: center;
+    padding-top: 0.5em;
+
+
+  }
+
+  .top-box h3{
+    font-size: 1em;
+  }
+
+  .box-a {
+    grid-area: box-a;
+  }
+
+
+
+  .box-b {
+    grid-area: box-b;
+
+  }
+
+  .top-box:hover {
+    color: green;
+  }
+
+
+
+
+
+
+
+
+
+/* BOTTOM QUADRUPLE SPLIT BOX ---- BYTT PASSORD BYTT EMAIL OG BRUKER DELETE */
+  .boxes-under {
+    grid-area: box-under;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .boxes-under h3{
+    font-size: 1em;
+  }
+
+  .box {
+    grid-column: auto;
+    background: #333;
+    color: white;
+    display: grid;
+    justify-items: center;
+    padding-top: 1em;
+
+}
+  .box:hover {
+    color: green;
+
+  }
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR PROFILE */
+  @media (max-width:700px) {
+    .top-content {
+      grid-template-areas:
+        "content"
+        "box-a"
+        "box-b"
+        "box-under";
+    }
+
+    .boxes-under {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+
+  /* STYLING FOR ALL THE DIFFERENT FUNCTIONS  */
+  /* Style the header */
+  /* Sticky box nav bar */
+  .sticky-bar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+
+
+
+  /* TABLE STYLINGS  STICKY*/
+  #tabell-header-sticky{
+    background: rgba(51, 51, 51, 1);
+    color: white;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid white;
+  }
+
+
+
+
+
+
+  #tabell-profil {
+    background: rgba(51, 51, 51, 1);
+    color: white;
+    width: 100%;
+    font-style: bold;
+    border-spacing: 0;
+  }
+
+  #tabell-profil tr:hover {
+    background: #444;
+  }
+
+  #tabell-profil td:hover {
+  background: #444;
+}
+
+
+
+  /* SALDO STYLING  */
+  .topLink {
+  }
+  #saldo{
+    color: black;
+  }
+
+
+
+  /* btn-transactions  */
+  #btn-transactions {
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    background: #f3f3f3;
+  }
+
+
+
+  /* DESIGN FOR PROFILE PAGES */
+  .form {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 1em;
+      padding: 1em;
+  }
+  .header-form {
+    grid-column: 1/5;
+    color: white;
+    text-align: right;
+  }
+
+  .label-form {
+    grid-column: 1 ;
+    align-self: start;
+    color: white;
+    font-size: 1.2em;
+    height: 50px;
+
+  }
+  .input-form {
+    grid-column: 2;
+    width: 100%;
+    height: 50px;
+
+  }
+  .input-form:focus {
+    outline: 3px solid green;
+  }
+  .btn-form {
+    grid-column: 2;
+    width: 100%;
+    align-self: start;
+    cursor: pointer;
+    background: #333;
+    border: white;
+    border-radius: 0.1em;
+    color: white;
+  }
+  .btn-form:hover {
+    transition: 1s ease;
+    background: #000;
+    color: green;
+    cursor: pointer;
+    border: 1px solid #333;
+  }
+  .span-form {
+    grid-column: 1;
+    grid-row: 5;
+    width: 100%
+    align-items: center;
+  }
+  .p-form {
+    grid-column: 1 /5;
+    color: white;
+    font-size: 1.1em;
+  }
+
+
+/* BIGGER WINDOW FOR TABLE */
+  #trans {
+  z-index: 1;
+  position: fixed;
+  display: grid;
+  background: rgba(51, 51, 51, 0.9);
+  width: 80%;
+  height: calc(100% - 5em);
+  box-shadow: 0 0 5px white;
+  overflow: auto;
+  height: 70vh;
+  border:4px solid black;
+  top:10%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.transknapp {
+
+
+  height: 40px;
+  float: right;
+  margin: 1em;
+  color: green;
+  font-size: 1.1em;
+
+}
+
+.transknapp:focus{
+  outline: 0;
+}

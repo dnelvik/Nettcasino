@@ -1,0 +1,26 @@
+body {
+
+}
+.content {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  background: #f3f3f3;
+}
+
+#main-reg {
+  width: 40%;
+  color: black;
+  margin: auto;
+
+}
+#main-reg h1 {
+  padding: 0.8em;
+}
+#main-reg a {
+  text-decoration: none;
+  font-style: italic;
+  color: #000;
+}
+#main-reg a:hover {
+  text-decoration: underline;
+}

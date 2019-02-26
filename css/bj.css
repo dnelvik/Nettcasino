@@ -1,0 +1,115 @@
+/* Core style css for Blackjack  */
+body{
+	background:black;
+	outline:0;
+
+}
+
+
+
+/* Spill wrapper for alle elementene.  */
+/* bruker grid for design */
+#spill{
+	background: #fff url("../bilder/bj.png");
+	background-repeat: no-repeat;
+	background-size: 145%;
+	background-position: 0% 30%;
+	display: grid;
+	grid-template-columns: 10vw 2fr;
+	min-height: 50%;
+	color: white;
+
+
+}
+
+/* de neste seksjonene er delt inn i colums */
+#section-a {
+	grid-column:2;
+	grid-row: 1;
+	margin-top:12vh;
+}
+#section-b {
+	grid-column:1;
+	grid-row: 1;
+	align-self:end;
+
+}
+#section-c {
+	grid-column:2;
+	grid-row: 2;
+}
+#section-d {
+	grid-column:1;
+	grid-row: 3;
+
+}
+#section-e {
+	grid-column: 2;
+	grid-row:4;
+}
+#section-f {
+	grid-column:2;
+	grid-row: 5;
+}
+
+
+
+
+/* informasjonsstrømmen til applikasjonen. Gevinst tap osv.  */
+#tekst {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	overflow-y: scroll;
+	height: 150px;
+	width: 300px;
+}
+
+
+#tekst::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+#dealerdata {
+	height: 150%;
+}
+
+
+
+
+
+
+.button {
+	background-color: black;
+	color: black;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+	position: absolute;
+	float:left;
+	margin-left: -17vh;
+	margin-top: 1vh;
+	outline: 0;
+}
+
+
+
+
+#sum {
+	background-color:rgba(0,0,0,0.6);
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	border-radius: 15px;
+	padding: 1em;
+	margin-left: 3em;
+	width: 150px;
+}
+
+
+#lydbilde img {
+	height: 20px;
+}

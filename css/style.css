@@ -1,0 +1,335 @@
+/* Core Styles for alle pages */
+body {
+ 
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+body a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+html {
+  box-sizing: border-box;
+
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+
+
+
+
+
+
+/* SLIDESHOW FOR INDEX ACTIVE CLASS FOR RED DOT  */
+.active {
+  background: #be222b;
+}
+
+
+
+
+
+
+
+
+/* CUSTOM SCROLLBAR  */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+/* NAV-bar */
+/* STICKY */
+.wrapper {
+  background: #000;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+}
+
+
+.top-sticky-bar {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 8vh;
+  top:0;
+  background: #000;
+  opacity: 1;
+  align-items: center;
+}
+
+/* DIFFERENT ELEMENTS WITHIN STICKY BAR */
+.topLink {
+  color: white;
+  text-decoration: none;
+}
+
+
+#nav-bar {
+  grid-column: 7/10;
+
+}
+.logo {
+  display: grid;
+  grid-column: 1;
+
+}
+
+
+#logo{
+  height: 60px;
+  margin-left: 0.5em;
+}
+
+
+
+.saldo-bruker {
+  grid-column:5;
+  grid-row: 1;
+  color: white;
+  align-items: center;
+  justify-self: center;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  text-transform: capitalize;
+
+}
+.saldo-row1 {
+  grid-row:1;
+}
+
+.saldo-bruker a {
+  grid-row: 2;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  color: green;
+}
+.saldo-bruker a:hover {
+  text-decoration: underline;
+}
+
+.nav-søk {
+  display: grid;
+  grid-column: 6;
+  grid-row: 1;
+
+
+}
+
+
+
+
+
+.nav-btn {
+  background: #333;
+  border: white;
+  border-radius: 0.1em;
+  color: white;
+  height: 40px;
+  width: 22%;
+  text-align: center;
+  transition: 1s ease;
+  display: inline-block;
+}
+.tmp-btn {
+  background: #be222b;
+}
+.nav-btn:hover {
+  transition: 1s ease;
+  background: #000;
+  color: green;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+.nav-søk input[type=text] {
+  background:#fff url(../bilder/searchicon.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  text-align: center;
+  color: #000;
+  height: 40px;
+  width: 95%;
+  border: black;
+  border-radius: 0.1em;
+
+}
+
+
+/* SEARCH BAR STYLINGS  */
+#search{
+  max-height: 250px;
+  border: 0px solid #f4f4f4;
+  overflow: auto;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  width: 550px;
+}
+
+
+#searchtitle{
+  padding:  1em;
+  background: #fff;
+}
+#searchtitle:hover{
+  background: lightblue;
+}
+
+
+
+
+
+
+
+
+
+/* Footer // Footer // Footer // Footer */
+footer {
+  background: #000;
+  height: 12vh;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+#bottomNavBar {
+  margin-top: 1em;
+}
+#bottomNavBar a{
+  text-decoration: none;
+  color: white;
+}
+#socialFooter img{
+  width: 50px;
+  display: inline-block;
+  margin: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries / / Media Queries / / Media Queries / / Media Queries */
+
+@media (max-width:700px) {
+  .logo  {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+/* Grids / / Grids // Grids // Grids // Grids // Grids */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  #section-a .content-text {
+  columns: 2/3;
+  column-gap: 2em;
+  }
+
+  #section-a .content-text p {
+  padding-top: 0;
+  }
+
+  .content-wrap, #section-b ul {
+  grid-column: 2/4;
+  }
+
+  #section-b ul {
+  display: flex;
+  justify-content: space-around;
+  }
+
+  #section-b li {
+  width: 31%;
+  }
+
+
+  /* Grid - About us */
+  #section-a-AboutUs .content-text {
+  columns: 1;
+  column-gap:0.5em;
+  }
+  #section-b-AboutUs ul {
+  grid-column: 1/5;
+  grid-gap: 1em;
+
+  }
+  #section-b-AboutUs ul {
+  display: flex;
+  justify-content: space-around;
+  }
+
+  #section-b-AboutUs li {
+  width:  15%;
+  }
+}
+
+
+#section-b-spill .content-text {
+columns: 1;
+column-gap:0.5em;
+
+}
+#section-b-spill ul {
+grid-column: 1/5;
+grid-gap: 1em;
+
+
+}
+#section-b-spill ul {
+display: flex;
+justify-content: space-around;
+}
+
+#section-b-spill li {
+width:  20%;
+}
+}

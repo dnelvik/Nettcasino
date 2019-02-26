@@ -1,0 +1,104 @@
+/* The gardin (background) */
+.gardin {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* gardin Content/Box */
+.gardin-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* ERROR/SUCESS melding fra login etc */
+#error{color: red;}
+#error p{
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  margin-top: 0;}
+
+#success {
+ color: green;
+}
+
+/* ERROR/SUCESS melding fra login etc */
+form h1 {
+  padding: 0;
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the gardin */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: firebrick;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* forms */
+.form-design {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.btn-form {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: 0.5em 0;
+  border-radius: 4px;
+}
+.content-main {
+  width: 100%;
+  color: black;
+  margin-top: 3em;
+}
+.content-main a {
+  text-decoration: none;
+  font-style: italic;
+  color: #000;
+}
+.content-main a:hover {
+  text-decoration: underline;
+}
